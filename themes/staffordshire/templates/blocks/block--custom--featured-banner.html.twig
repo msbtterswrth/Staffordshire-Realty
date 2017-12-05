@@ -1,0 +1,11 @@
+{% extends 'block.html.twig' %}
+{% block content %}
+    <div class="bg" style="background:url({{ file_url(content.field_image['#items'].entity.uri.value) }}) no-repeat center; background-size:cover;">
+        <div class="container">
+            <div class="inner">
+                <h2>{{ content.field_title }}</h2>
+                {{ content.body }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

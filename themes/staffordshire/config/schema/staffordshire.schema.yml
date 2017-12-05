@@ -1,0 +1,5 @@
+# Schema for the configuration files of the mdspca theme.
+
+staffordshire.settings:
+  type: theme_settings
+  label: 'staffordshire settings'

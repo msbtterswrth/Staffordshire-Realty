@@ -1,0 +1,77 @@
+.btn {
+    border-radius:0!important;
+    box-shadow:none!important;
+    outline:none!important;
+    text-transform:uppercase;
+    text-decoration:none!important;
+    text-align: left;
+    font-size:20px;
+    line-height:20px;
+    padding:16px 60px 14px 30px;
+    position: relative;
+    @include transition(background .3s linear);
+    &::after {
+        content: "\f101";
+        font-family: icomoon;
+        position: absolute;
+        right: 20px;
+        font-size: 30px;
+        line-height: 20px;
+        top: 14px;
+        @include transition(right .3s linear);
+    }
+    &:hover {
+        &::after {
+            right:10px;
+        }
+    }
+    &.clear {
+        color:#fff!important;
+        border:1px solid #fff; 
+        background:rgba(255,255,255,.1);
+        &:hover {
+            background: rgba(255,255,255,.2);
+            color:#fff;
+        }
+    }
+    &.blue {
+        background:$blue;
+        color:#fff!important;
+        &:hover {
+            background: darken($blue, 20%);
+        }
+    }
+    &.teal {
+        background:$orange;
+        color:#fff!important;
+        &:hover {
+            background: darken($orange, 20%);
+        }
+    }
+    &.green {
+        background:$green;
+        color:#fff!important;
+        &:hover {
+            background: darken($green, 20%);
+        }
+    }
+    &.black {
+        background:#000;
+        color:#fff!important;
+        &:hover {
+            background: $md-gray;
+        }
+    }
+    &.facebook {
+        background:#3b5998;
+        color:#fff!important;
+        &::before {
+            content: "\f09a";
+            font-family: icomoon;
+            margin-right: 15px;
+        }
+        &:hover {
+            background: darken(#3b5998, 10%);
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.input-group, .form-item {
+    margin-bottom:10px;
+    input {
+        border-radius:0;
+        border:1px solid $lt-gray;
+        box-shadow:none;
+        outline:none;
+        line-height:32px;
+        padding:10px 15px;
+        font-size:20px;
+        font-family:$font-rb;
+        font-weight:400;
+        width:100%;
+        color:$md-gray;
+        background:#fff;
+        &:focus {
+            border:1px solid $blue; 
+        }
+        &.error {
+            border:1px solid $red;
+        }
+        @include placeholder {
+            color:$lt-gray;
+            opacity:1;
+        }
+    }
+    textarea {
+        border-radius:0;
+        box-shadow:none;
+        outline:none;
+        padding:16px;
+        &:focus {
+            border:1px solid $blue; 
+            box-shadow:none;
+        }
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          font-size:12px;
+          line-height: 40px;
+          opacity:1;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          font-size:12px;
+          opacity:1;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          font-size:12px;
+          opacity:1;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          font-size:12px;
+          opacity:1;
+        }
+    }
+}
+
+
+.bootstrap-select.btn-group, .bootstrap-select {
+    width:100%!important;
+    ul {
+        li {
+            display:block!important;
+            a {
+                font-size:14px!important;
+            }
+        }
+    }
+    .dropdown-toggle {
+        border-radius:0;
+        border:2px solid $gray;
+        box-shadow:none;
+        text-shadow:none;
+        outline:none;
+        font-size: 20px;
+        font-family:$font-rb;
+        font-weight:400;
+        overflow:hidden;
+        padding:10px 15px;
+        line-height:30px;
+        color:$gray;
+        background:none;
+        text-transform:none;
+        &:hover, &:focus {
+            border:2px solid $gray;
+            box-shadow:none;
+            outline:none;
+            color:#fff;
+            background:$gray;
+            text-shadow:none;
+            .bs-caret {
+                .caret {
+                    border-top: 12px dashed #fff;
+                }
+            }
+        }
+        .bs-caret {
+            position:absolute;
+            top:0;
+            right:0;
+            width:40px;
+            height:100%;
+            .caret {
+                margin-top:-4px;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-top: 12px dashed $gray;
+            }
+        }
+    }
+    &.dropup {
+        .caret {
+            border-bottom: 12px dashed;
+            border-top: 0!important;
+        }
+    }
+    .dropdown-menu {
+        border:none;
+        box-shadow:none;
+        border-radius:0;
+        background:$xl-gray;
+        > li {
+            > a {
+                text-transform:none;
+                font-size:18px!important;
+                &:hover, &:focus {
+                    color:#fff;
+                    background:$lt-gray;
+                }
+            }
+        }                                
+    }
+}

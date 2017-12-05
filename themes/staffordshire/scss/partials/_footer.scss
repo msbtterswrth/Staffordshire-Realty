@@ -1,0 +1,15 @@
+.footer {
+    background:#fff;
+    color:#848484;
+    a {
+        color: $green;
+    }
+    .btn {
+        display:block;
+        width:80%;
+        margin: 0 auto;
+        @include breakpoint(xs) {
+            width:100%;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/themes/staffordshire/fonts/icomoon.eot?p5ou1g');
+  src:  url('/themes/staffordshire/fonts/icomoon.eot?p5ou1g#iefix') format('embedded-opentype'),
+    url('/themes/staffordshire/fonts/icomoon.ttf?p5ou1g') format('truetype'),
+    url('/themes/staffordshire/fonts/icomoon.woff?p5ou1g') format('woff'),
+    url('/themes/staffordshire/fonts/icomoon.svg?p5ou1g#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e901";
+}
+.icon-arrow-down:before {
+  content: "\e902";
+}
+.icon-bath:before {
+  content: "\e903";
+}
+.icon-dollar:before {
+  content: "\e904";
+}
+.icon-bed:before {
+  content: "\e905";
+}
+.icon-menu:before {
+  content: "\e906";
+}
+.icon-search:before {
+  content: "\e907";
+}
+.icon-handshake:before {
+  content: "\e908";
+}
+.icon-phone:before {
+  content: "\e909";
+}
+.icon-briefcase:before {
+  content: "\e90a";
+}
+.icon-calendar:before {
+  content: "\e90b";
+}
+
+
+.typography {
+    h1 {
+    }
+    i {
+        font-size:24px
+    }
+    .example {
+        border:1px solid darken(#f5f5f5, 20%);
+        padding:30px 10px 10px;
+        position:relative;
+        &::after {
+            background-color: #ebebeb;
+            border: 1px solid #dddddd;
+            border-radius: 0 0 4px 0;
+            color: #9da0a4;
+            content: "Example";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: bold;
+            left: -1px;
+            padding: 3px 7px;
+            position: absolute;
+            top: -1px;
+        }
+        + code, + .codeblock {
+            background:#f5f5f5;
+            border:1px solid darken(#f5f5f5, 20%);
+            border-top:0;
+            color:#333;
+            display:block;
+            border-radius:0;
+            padding:10px;
+            code {
+                background:none;
+                border:none;
+                padding:0;
+            }
+        }
+    }
+    .row {
+        + .row {
+            margin-top:30px;
+        }
+    }
+}

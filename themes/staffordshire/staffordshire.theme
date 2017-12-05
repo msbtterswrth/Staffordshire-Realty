@@ -1,0 +1,30 @@
+<?php
+
+use Drupal\staffordshire\Theme;
+
+function staffordshire_preprocess_html(array &$vars) {
+
+}
+
+function staffordshire_preprocess_page(array &$vars) {
+  Theme::getSiteWrapClasses($vars);
+}
+
+function staffordshire_preprocess_node(array &$vars) {
+
+}
+
+function staffordshire_preprocess_region(array &$vars) {
+
+}
+function staffordshire_theme_suggestions_block_alter(array &$suggestions, array $vars) {
+  Theme::getThemeSuggestionsForBlocks($suggestions, $vars);
+}
+
+function staffordshire_theme_suggestions_paragraph_alter(array &$suggestions, array $vars) {
+  Theme::getThemeSuggestionsForParagraphs($suggestions, $vars);
+}
+
+function staffordshire_preprocess_container(array &$vars) {
+
+}
