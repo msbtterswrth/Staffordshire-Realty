@@ -24,7 +24,10 @@ body {
         }
         &.top {
             background:$blue;
-            padding:80px 0;
+            padding:20px 0;
+            h1 {
+                color:#fff;
+            }
         }
         &.main {
             padding:0;

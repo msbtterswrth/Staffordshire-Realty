@@ -35,6 +35,23 @@
             }
         }
     }
+    .top {
+        padding:80px 0 120px;
+        &::before {
+            content: "Baltimore Hampden MT. Washington Canton Fells Point Roland Park Gwynn Oak Federal Hill Catonsville Inner Harbor Waverly Towson Belair Belvedere Charles Bolton Hill Upton Seton Hill Locust Point Pigtown Patterson Park Highlandtown Bayview Pimlico Overlea Loch Raven";
+            font-size: 75px;
+            position: absolute;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: #3e4d77;
+            line-height: 100px;
+            text-align: justify;
+            letter-spacing: 1px;
+            width: 100%;
+            left: -10px;
+            top: 0;
+        }
+    }
     .main {
         display:none;
     }

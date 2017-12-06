@@ -7,24 +7,9 @@
     text-align: left;
     font-size:20px;
     line-height:20px;
-    padding:16px 60px 14px 30px;
+    padding:16px 30px;
     position: relative;
     @include transition(background .3s linear);
-    &::after {
-        content: "\f101";
-        font-family: icomoon;
-        position: absolute;
-        right: 20px;
-        font-size: 30px;
-        line-height: 20px;
-        top: 14px;
-        @include transition(right .3s linear);
-    }
-    &:hover {
-        &::after {
-            right:10px;
-        }
-    }
     &.clear {
         color:#fff!important;
         border:1px solid #fff; 
@@ -41,7 +26,7 @@
             background: darken($blue, 20%);
         }
     }
-    &.teal {
+    &.orange {
         background:$orange;
         color:#fff!important;
         &:hover {
@@ -60,18 +45,6 @@
         color:#fff!important;
         &:hover {
             background: $md-gray;
-        }
-    }
-    &.facebook {
-        background:#3b5998;
-        color:#fff!important;
-        &::before {
-            content: "\f09a";
-            font-family: icomoon;
-            margin-right: 15px;
-        }
-        &:hover {
-            background: darken(#3b5998, 10%);
         }
     }
 }

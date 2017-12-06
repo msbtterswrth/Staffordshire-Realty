@@ -45,6 +45,28 @@ div[class^="box"] {
         }
     }
 }
+#block-staffordshire-local-tasks {
+    ul {
+        padding:0;
+        list-style-type:none;
+        border-bottom:2px solid $xl-gray;
+        li {
+            display:inline-block;
+            background:$xl-gray;
+            padding:10px;
+            @include transition(background .3s linear);
+            &:hover, &:focus {
+                background:$lt-gray;
+                a {
+                    color:#fff;
+                }
+            }
+            a {
+                color:$gray;
+            }
+        }
+    }
+}
 #block-homepagefeatures {
     text-align: center;
     color:#fff;
@@ -65,17 +87,17 @@ div[class^="box"] {
     }
     .inner {
         background:#fff;
-        padding:15px;
+        padding:45px 20px;
         color:darken($blue,.2);
         p {
             font-size:15px;
             line-height:21px;
+            margin:0;
         }
-        .big {
-            font-size:90px;
-            margin-bottom: 15px;
+        i {
+            font-size:65px;
+            margin-bottom: 25px;
             display: block;
-            font-weight: 900;
         }
     }
 }

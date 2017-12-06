@@ -258,30 +258,13 @@
   text-align: left;
   font-size: 20px;
   line-height: 20px;
-  padding: 16px 60px 14px 30px;
+  padding: 16px 30px;
   position: relative;
   -webkit-transition: background 0.3s linear;
   -moz-transition: background 0.3s linear;
   -ms-transition: background 0.3s linear;
   -o-transition: background 0.3s linear;
   transition: background 0.3s linear;
-}
-.btn::after {
-  content: "\f101";
-  font-family: icomoon;
-  position: absolute;
-  right: 20px;
-  font-size: 30px;
-  line-height: 20px;
-  top: 14px;
-  -webkit-transition: right 0.3s linear;
-  -moz-transition: right 0.3s linear;
-  -ms-transition: right 0.3s linear;
-  -o-transition: right 0.3s linear;
-  transition: right 0.3s linear;
-}
-.btn:hover::after {
-  right: 10px;
 }
 .btn.clear {
   color: #fff !important;
@@ -299,11 +282,11 @@
 .btn.blue:hover {
   background: #20273b;
 }
-.btn.teal {
+.btn.orange {
   background: #b66f36;
   color: #fff !important;
 }
-.btn.teal:hover {
+.btn.orange:hover {
   background: #673f1f;
 }
 .btn.green {
@@ -319,18 +302,6 @@
 }
 .btn.black:hover {
   background: #3c3d40;
-}
-.btn.facebook {
-  background: #3b5998;
-  color: #fff !important;
-}
-.btn.facebook::before {
-  content: "\f09a";
-  font-family: icomoon;
-  margin-right: 15px;
-}
-.btn.facebook:hover {
-  background: #2d4373;
 }
 
 .slick .slick-arrow {
@@ -483,6 +454,31 @@ div[class^="box"].box2 h4 {
   text-transform: uppercase;
 }
 
+#block-staffordshire-local-tasks ul {
+  padding: 0;
+  list-style-type: none;
+  border-bottom: 2px solid #f0f0f0;
+}
+#block-staffordshire-local-tasks ul li {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 10px;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -ms-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+#block-staffordshire-local-tasks ul li:hover, #block-staffordshire-local-tasks ul li:focus {
+  background: #d8d8d8;
+}
+#block-staffordshire-local-tasks ul li:hover a, #block-staffordshire-local-tasks ul li:focus a {
+  color: #fff;
+}
+#block-staffordshire-local-tasks ul li a {
+  color: #231F20;
+}
+
 #block-homepagefeatures {
   text-align: center;
   color: #fff;
@@ -508,18 +504,84 @@ div[class^="box"].box2 h4 {
 }
 #block-homepagefeatures .inner {
   background: #fff;
-  padding: 15px;
+  padding: 45px 20px;
   color: #43527d;
 }
 #block-homepagefeatures .inner p {
   font-size: 15px;
   line-height: 21px;
+  margin: 0;
 }
-#block-homepagefeatures .inner .big {
-  font-size: 90px;
-  margin-bottom: 15px;
+#block-homepagefeatures .inner i {
+  font-size: 65px;
+  margin-bottom: 25px;
   display: block;
-  font-weight: 900;
+}
+
+.header .nav ul {
+  list-style-type: none;
+  padding: none;
+  margin: 0;
+  text-align: right;
+}
+.header .nav ul li {
+  display: inline-block;
+  font-size: 22px;
+  vertical-align: middle;
+  padding: 20px 30px;
+}
+.header .nav ul li a {
+  color: #43527e;
+  font-weight: 300;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: 10px 0 5px;
+}
+.header .nav ul li a::before {
+  background: #43527e;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: -5px;
+  height: 2px;
+  width: 100%;
+  -moz-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  -webkit-transition: transform 0.3s linear;
+  -moz-transition: transform 0.3s linear;
+  -ms-transition: transform 0.3s linear;
+  -o-transition: transform 0.3s linear;
+  transition: transform 0.3s linear;
+}
+.header .nav ul li a:hover::before, .header .nav ul li a.active::before {
+  -moz-transform: translate(0%, 0);
+  -o-transform: translate(0%, 0);
+  -ms-transform: translate(0%, 0);
+  -webkit-transform: translate(0%, 0);
+  transform: translate(0%, 0);
+}
+.header .nav ul li a.btn {
+  border: 1px solid #43527e;
+  padding: 20px 30px;
+  -webkit-transition: border 0.3s linear, background 0.3s linear, color 0.3s linear;
+  -moz-transition: border 0.3s linear, background 0.3s linear, color 0.3s linear;
+  -ms-transition: border 0.3s linear, background 0.3s linear, color 0.3s linear;
+  -o-transition: border 0.3s linear, background 0.3s linear, color 0.3s linear;
+  transition: border 0.3s linear, background 0.3s linear, color 0.3s linear;
+}
+.header .nav ul li a.btn::before {
+  display: none;
+}
+.header .nav ul li a.btn:hover {
+  border: 1px solid #313c5d;
+  background: #313c5d;
+  color: #fff;
 }
 
 .footer {
@@ -581,6 +643,23 @@ div[class^="box"].box2 h4 {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+}
+.home-wrap .top {
+  padding: 80px 0 120px;
+}
+.home-wrap .top::before {
+  content: "Baltimore Hampden MT. Washington Canton Fells Point Roland Park Gwynn Oak Federal Hill Catonsville Inner Harbor Waverly Towson Belair Belvedere Charles Bolton Hill Upton Seton Hill Locust Point Pigtown Patterson Park Highlandtown Bayview Pimlico Overlea Loch Raven";
+  font-size: 75px;
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #3e4d77;
+  line-height: 100px;
+  text-align: justify;
+  letter-spacing: 1px;
+  width: 100%;
+  left: -10px;
+  top: 0;
 }
 .home-wrap .main {
   display: none;
@@ -654,6 +733,60 @@ div[class^="box"].box2 h4 {
   margin: 0 auto 30px;
 }
 
+.content article ul:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots) {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+.content article ul:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots) li {
+  position: relative;
+  font-size: 18px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .content article ul:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots) li {
+    font-size: 16px;
+  }
+}
+.content article ul:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots) li + li {
+  margin-top: 15px;
+}
+.content article ul:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots) li::before {
+  color: #43527e;
+  content: "\2022";
+  display: block;
+  font-size: 28px;
+  left: -20px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  vertical-align: top;
+}
+.content article ul:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots) li ul {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.content article ul:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots) li ul li {
+  font-size: 16px;
+}
+.content article ul:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots) li ul li + li {
+  margin-top: 7px;
+}
+.content article ul:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots) li ul li::before {
+  font-size: 24px;
+}
+.content article ul.two-col {
+  columns: 2 auto;
+  column-gap: 100px;
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+@media (max-width: 767px) {
+  .content article ul.two-col {
+    columns: 1;
+  }
+}
+
 body {
   text-rendering: optimizeLegibility;
   font-size: 16px;
@@ -668,7 +801,10 @@ body section.banner {
 }
 body section.top {
   background: #43527e;
-  padding: 80px 0;
+  padding: 20px 0;
+}
+body section.top h1 {
+  color: #fff;
 }
 body section.main {
   padding: 0;

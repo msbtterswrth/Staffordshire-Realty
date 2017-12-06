@@ -1,0 +1,55 @@
+.content {
+    article {
+        ul {
+            &:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots){
+                list-style-type:none;
+                padding-left:20px;
+                margin-bottom:30px;
+                li {
+                    position:relative;
+                    font-size:18px;
+                    @include breakpoint(md) {
+                        font-size:16px;
+                    }
+                    + li {
+                        margin-top:15px;
+                    }
+                    &::before {
+                        color: $blue;
+                        content: "\2022";
+                        display: block;
+                        font-size: 28px;
+                        left: -20px;
+                        line-height: 20px;
+                        position: absolute;
+                        top: 0;
+                        vertical-align: top;
+                    }
+                    ul {
+                        margin-bottom:0;
+                        margin-top:10px;
+                        li {
+                            font-size:16px;
+                            + li {
+                                margin-top:7px;
+                            }
+                            &::before {
+                                font-size:24px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.two-col {
+                columns:2 auto;
+                column-gap:100px;
+                display:inline-block;
+                list-style-type:none;
+                padding:0;
+                @include breakpoint(xs) {
+                    columns:1;
+                }
+            }
+        }
+    }
+}
