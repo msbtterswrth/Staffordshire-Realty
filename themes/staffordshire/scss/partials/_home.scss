@@ -121,14 +121,14 @@
     .feature {
         .bg {
             height:40vh;
-            min-height: 550px;
+            min-height: 650px;
             padding: 120px 0;
             position: relative;
             overflow: hidden;
             color:#fff;
             text-align:center;
             @include breakpoint(sm){
-                min-height:350px;
+                height:auto;
             }
             @include breakpoint(xs){
                 height:auto;
@@ -148,6 +148,12 @@
                 left: 0;
                 width:100%;
                 @include translate(0,-50%);
+                @include breakpoint(sm) {
+                    position: relative;
+                    top:0;
+                    @include translate(0,0);
+                    
+                }
                 @include breakpoint(xs) {
                     position: relative;
                     top:0;

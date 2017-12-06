@@ -1,15 +1,18 @@
 .footer {
     background:#fff;
-    color:#848484;
-    a {
-        color: $green;
+    color:$md-gray;
+    p {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 28px;
+        a {
+            color: $blue;
+            &:hover {
+                color:$green;
+            }
+        }
     }
     .btn {
-        display:block;
-        width:80%;
-        margin: 0 auto;
-        @include breakpoint(xs) {
-            width:100%;
-        }
+        text-align: center;
     }
 }

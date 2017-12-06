@@ -612,6 +612,17 @@ div[class^="box"].box2 h4 {
   vertical-align: middle;
   padding: 20px 30px;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header .nav ul li {
+    padding: 10px 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .header .nav ul li {
+    padding: 10px;
+    font-size: 18px;
+  }
+}
 @media (max-width: 767px) {
   .header .nav ul li {
     display: block;
@@ -629,6 +640,11 @@ div[class^="box"].box2 h4 {
   overflow: hidden;
   display: block;
   padding: 10px 0 5px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header .nav ul li a {
+    padding: 5px 0px;
+  }
 }
 @media (max-width: 767px) {
   .header .nav ul li a {
@@ -682,6 +698,12 @@ div[class^="box"].box2 h4 {
   -o-transition: border 0.3s linear, background 0.3s linear, color 0.3s linear;
   transition: border 0.3s linear, background 0.3s linear, color 0.3s linear;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .header .nav ul li a.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}
 @media (max-width: 767px) {
   .header .nav ul li a.btn {
     border: none !important;
@@ -705,20 +727,21 @@ div[class^="box"].box2 h4 {
 
 .footer {
   background: #fff;
-  color: #848484;
+  color: #3c3d40;
 }
-.footer a {
+.footer p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+}
+.footer p a {
+  color: #43527e;
+}
+.footer p a:hover {
   color: #a6bb51;
 }
 .footer .btn {
-  display: block;
-  width: 80%;
-  margin: 0 auto;
-}
-@media (max-width: 767px) {
-  .footer .btn {
-    width: 100%;
-  }
+  text-align: center;
 }
 
 .home-wrap .header {
@@ -838,7 +861,7 @@ div[class^="box"].box2 h4 {
 }
 .home-wrap .feature .bg {
   height: 40vh;
-  min-height: 550px;
+  min-height: 650px;
   padding: 120px 0;
   position: relative;
   overflow: hidden;
@@ -847,7 +870,7 @@ div[class^="box"].box2 h4 {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .home-wrap .feature .bg {
-    min-height: 350px;
+    height: auto;
   }
 }
 @media (max-width: 767px) {
@@ -874,6 +897,17 @@ div[class^="box"].box2 h4 {
   -ms-transform: translate(0, -50%);
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .home-wrap .feature .bg .inner {
+    position: relative;
+    top: 0;
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
 @media (max-width: 767px) {
   .home-wrap .feature .bg .inner {
@@ -1065,6 +1099,7 @@ body p.lead {
   margin: 0 0 30px 0;
 }
 body a {
+  text-decoration: none;
   -webkit-transition: color 0.3s linear;
   -moz-transition: color 0.3s linear;
   -ms-transition: color 0.3s linear;

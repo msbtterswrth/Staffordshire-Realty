@@ -1,5 +1,7 @@
 {% extends 'block.html.twig' %}
 {% block content %}
-    <h2>{{ content.field_title }}</h1>
+    <div class="col-xs-12">
+        <h2>{{ content.field_title }}</h2>
+    </div>
     {{ content.field_featured_ctas }}
 {% endblock %}

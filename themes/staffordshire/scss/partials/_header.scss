@@ -50,6 +50,13 @@
                 font-size: 22px;
                 vertical-align: middle;
                 padding:20px 30px;
+                @include breakpoint(md) {
+                    padding:10px 15px;
+                }
+                @include breakpoint(sm) {
+                    padding:10px;
+                    font-size: 18px;
+                }
                 @include breakpoint(xs) {
                     display: block;
                     padding:30px 0;
@@ -65,6 +72,9 @@
                     overflow: hidden;
                     display: block;
                     padding:10px 0 5px;
+                    @include breakpoint(md) {
+                        padding:5px 0px;
+                    }
                     @include breakpoint(xs) {
                         text-transform: uppercase;
                         padding:0;
@@ -98,6 +108,10 @@
                         border:1px solid $blue;
                         padding:20px 30px;
                         @include transition(border .3s linear, background .3s linear, color .3s linear);
+                        @include breakpoint(sm) {
+                            padding:10px 15px;
+                            font-size: 16px;
+                        }
                         @include breakpoint(xs) {
                             border:none!important;
                             padding: 0;

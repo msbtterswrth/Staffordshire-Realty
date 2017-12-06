@@ -106,6 +106,7 @@ body {
         }
     }
     a {
+        text-decoration: none;
         @include transition(color .3s linear);
     }
     blockquote {
