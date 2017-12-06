@@ -51,12 +51,24 @@
             }
         });
     }
+    function initScrollClass(context) {
+      $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 50) {
+            $('body').addClass("scroll");
+        } else {
+            $('body').removeClass("scroll");
+        }
+      });
+    }
     Drupal.behaviors.staffordshire = {
         _isInvokedByDocumentReady: true,
         attach: function(context) {
             if (this._isInvokedByDocumentReady) {
                 this._isInvokedByDocumentReady = false;
             }
+            initScrollClass(context);
             initExternalLinks(context);
             initmatchHeight(context);
             initBootstrapSelect(context);
@@ -65,9 +77,6 @@
             $(".search-toggle").click(function() {
                 $("body").toggleClass("search-open");
                 $("body").removeClass("nav-open");
-            });
-            $(".more-toggle").click(function() {
-                $("body").toggleClass("more-open");
             });
             $(".nav-toggle").click(function() {
                 $("body").toggleClass("nav-open");

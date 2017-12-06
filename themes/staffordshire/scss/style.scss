@@ -25,6 +25,7 @@ body {
         &.top {
             background:$blue;
             padding:20px 0;
+            overflow:hidden;
             h1 {
                 color:#fff;
             }

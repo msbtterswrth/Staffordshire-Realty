@@ -1,4 +1,67 @@
 .home-wrap {
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9;
+        background: transparent;
+        @include transition(background .3s linear, padding .3s linear);
+        .logo {
+            .color-logo {
+                display: none;
+            }
+            .white-logo {
+                display:block;
+            }
+        }
+        .nav {
+            ul {
+                li {
+                    a {
+                        color:#fff;
+                        &::before {
+                            background:#fff;
+                        }
+                        &.btn {
+                            border:1px solid #fff;
+                            &:hover {
+                                background:rgba(#fff,.2)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .scroll:not(.nav-open) &{
+            background:#fff;
+            padding:10px 0;
+            .white-logo {
+                display: none;
+            }
+            .color-logo {
+                display:block;
+            }
+            .nav {
+                ul {
+                    li {
+                        a {
+                            color:$blue;
+                            &::before {
+                                background:$blue;
+                            }
+                            &.btn {
+                                border:1px solid $blue;
+                                &:hover {
+                                    background: darken($blue,10%);
+                                    color:#fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .banner {
         .bg {
             height:60vh;
@@ -68,7 +131,7 @@
                 min-height:350px;
             }
             @include breakpoint(xs){
-                min-height:none;
+                height:auto;
             }
             &::before {
                 content: "";
@@ -85,6 +148,12 @@
                 left: 0;
                 width:100%;
                 @include translate(0,-50%);
+                @include breakpoint(xs) {
+                    position: relative;
+                    top:0;
+                    @include translate(0,0);
+                    
+                }
                 h2 {
                     color:#fff;
                     margin:0;
