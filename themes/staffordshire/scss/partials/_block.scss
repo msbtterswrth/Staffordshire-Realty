@@ -28,20 +28,47 @@ div[class^="box"] {
         margin-top:0;
     }
     &.box1 {
-        background:$xl-gray;
+        background:$blue;
         padding:20px;
-        .btn {
-            display:block;
-        }
+        color:#fff;
     }
     &.box2 {
-        border:1px solid $xl-gray;
+        background:darken($blue,10%);
+        color:#fff;
         padding:20px;
-        h4 {
-            color:$gray;
-            font-family:$font-rb;
-            margin:0 0 20px 0;
-            text-transform:uppercase;
+    }
+    &.box3 {
+        background:$xl-gray;
+        padding:20px;
+        color:#fff;
+    }
+    &.box4 {
+        border:1px solid $blue;
+        padding:20px;
+        color:#fff;
+    }
+}
+.features {
+    margin:60px -15px;
+    div[class^="box"] {
+        text-align: center;
+        padding:40px 20px;
+        .title {
+            color:#fff;
+            font-size:20px;
+        }
+        .blurb {
+            font-size:80px;
+            font-weight: 800;
+            margin:40px 0;
+            span {
+                font-size:50px;
+                text-transform: uppercase;
+            }
+        }
+        &.box2 {
+            margin: -30px 0;
+            padding: 70px 0;
         }
     }
 }

@@ -5,6 +5,7 @@
         width: 100%;
         z-index: 9;
         background: transparent;
+        padding:40px 0;
         @include transition(background .3s linear, padding .3s linear);
         .logo {
             .color-logo {
@@ -77,6 +78,9 @@
             }
             h1 {
                 color:#fff;
+                font-size: 60px;
+                font-weight: 900;
+                letter-spacing:1px;
                 margin:0;
                 position: absolute;
                 top:50%;
@@ -100,6 +104,7 @@
     }
     .top {
         padding:80px 0 120px;
+        background:$blue;
         &::before {
             content: "Baltimore Hampden MT. Washington Canton Fells Point Roland Park Gwynn Oak Federal Hill Catonsville Inner Harbor Waverly Towson Belair Belvedere Charles Bolton Hill Upton Seton Hill Locust Point Pigtown Patterson Park Highlandtown Bayview Pimlico Overlea Loch Raven";
             font-size: 75px;

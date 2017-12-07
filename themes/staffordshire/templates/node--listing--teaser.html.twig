@@ -1,0 +1,24 @@
+<article{{ attributes }}>
+  <div class="item">
+      <div class="img">
+        <a href="{{ url }}">{{ content.field_featured_image }}</a>
+      </div>
+      <div class="info">
+        <div class="price"><i class="icon-dollar"></i> {{ content.field_rent.0 }}</div>
+        <div class="bed"><i class="icon-bed"></i> {{ content.field_bedrooms.0 }}</div>
+        <div class="bath"><i class="icon-bath"></i> {{ content.field_bathrooms.0 }}</div>
+      </div>
+      <div class="blurb">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="title">
+              {{ label }}
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-8">
+            {{ content.body }}
+          </div>
+        </div>
+      </div>
+  </div>
+</article>
