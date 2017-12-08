@@ -151,6 +151,7 @@
 }
 .input-group textarea, .form-item textarea {
   border-radius: 0;
+  border: 1px solid #d8d8d8;
   box-shadow: none;
   outline: none;
   padding: 16px;
@@ -1318,7 +1319,6 @@ body section .container {
 }
 body section.bottom {
   background: #f0f0f0;
-  padding: 0;
 }
 body section.feature {
   padding: 0;
