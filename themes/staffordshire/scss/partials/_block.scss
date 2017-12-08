@@ -1,18 +1,21 @@
-div[class^="box"] {
-    + div[class^="box"] {
+div[class*="box"] {
+    + div[class*="box"] {
         margin-top:30px;
         &.flush {
             margin-top:0;
         }
     }
     h4 {
-        font-size:22px;
+        font-size:20px;
         font-weight:600;
         margin:0;
+        + p {
+            margin-top:20px;
+        }
     }
     p {
-        font-size:14px;
-        line-height:20px;
+        font-size:16px;
+        line-height:24px;
         margin-bottom:10px;
         + h4 {
             margin-top:20px;
@@ -40,12 +43,15 @@ div[class^="box"] {
     &.box3 {
         background:$xl-gray;
         padding:20px;
-        color:#fff;
+        color:$gray;
     }
     &.box4 {
-        border:1px solid $blue;
+        border:2px solid $blue;
         padding:20px;
-        color:#fff;
+        color:darken$md-gray;
+        h4 {
+            color:$blue;
+        }
     }
 }
 .features {

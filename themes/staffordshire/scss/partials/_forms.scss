@@ -66,7 +66,7 @@
     }
     .dropdown-toggle {
         border-radius:0;
-        border:2px solid $gray;
+        border:none;
         box-shadow:none;
         text-shadow:none;
         outline:none;
@@ -76,19 +76,18 @@
         overflow:hidden;
         padding:10px 15px;
         line-height:30px;
-        color:$gray;
-        background:none;
+        color:#fff;
+        background:$blue;
         text-transform:none;
         &:hover, &:focus {
-            border:2px solid $gray;
             box-shadow:none;
             outline:none;
             color:#fff;
-            background:$gray;
+            background:darken($blue,10%);
             text-shadow:none;
             .bs-caret {
                 .caret {
-                    border-top: 12px dashed #fff;
+                    border:none;
                 }
             }
         }
@@ -99,32 +98,57 @@
             width:40px;
             height:100%;
             .caret {
-                margin-top:-4px;
-                border-left: 8px solid transparent;
-                border-right: 8px solid transparent;
-                border-top: 12px dashed $gray;
+                border:none;
+                position: relative;
+                display: block;
+                height: 23px;
+                right:0;
+                @include translate(0,-50%);
+                &::before {
+                    content: "\e902";
+                    font-family: icomoon;
+                    color:#fff;
+                    font-family: 18px;
+                    display: block;
+                    @include rotate(0);
+                    @include transition(transform .3s linear);
+                    @include transform-origin(8px center);
+                }
             }
         }
     }
-    &.dropup {
-        .caret {
-            border-bottom: 12px dashed;
-            border-top: 0!important;
+    &.dropup, &.open {
+        .bs-caret {
+            .caret {
+                &::before {
+                    @include rotate(180);
+                }
+            }
         }
     }
     .dropdown-menu {
         border:none;
         box-shadow:none;
         border-radius:0;
-        background:$xl-gray;
+        background:darken($blue,5%);
         > li {
             > a {
                 text-transform:none;
+                color:#fff;
                 font-size:18px!important;
+                background:none;
                 &:hover, &:focus {
-                    color:#fff;
-                    background:$lt-gray;
+                    color:$green;
+                    background:none;
                 }
+            }
+            &.selected {
+                > a {
+                    color:$green;
+                }
+            }
+            + li {
+                border-top:1px solid $blue;
             }
         }                                
     }
