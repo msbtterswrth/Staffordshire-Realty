@@ -8,8 +8,8 @@ dependencies:
 
 configure: menu_attributes.settings
 
-# Information added by Drupal.org packaging script on 2017-06-07
+# Information added by Drupal.org packaging script on 2017-11-21
 version: '8.x-1.x-dev'
 core: '8.x'
 project: 'menu_attributes'
-datestamp: 1496875744
+datestamp: 1511284699
