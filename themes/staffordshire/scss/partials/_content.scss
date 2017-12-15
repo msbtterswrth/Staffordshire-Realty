@@ -1,5 +1,12 @@
 .content {
     article {
+        h2 {
+            font-size:42px;
+            text-transform: none;
+            font-weight: 400;
+            line-height: 50px;
+            margin-bottom: 20px;
+        }
         ul {
             &:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots){
                 list-style-type:none;
@@ -53,6 +60,34 @@
         }
     }
     .sidebar {
+        h1  {
+            font-size:28px;
+            font-weight: 500;
+            line-height: 36px;
+            text-align: right;
+            color: $gray;
+        }
+        .info {
+            margin: 20px 0;
+            text-align: right;
+            font-size:22px;
+            div {
+                padding: 10px 0;
+                + div {
+                    border-top: 1px solid $lt-gray;
+                }
+            }
+            i {
+                margin-right: 15px;
+                float: left;
+                line-height: 35px;
+            }
+        }
+        .btn:not(.underline):not(.dropdown-toggle) {
+            text-align: center;
+            padding:20px 30px;
+            margin-bottom: 20px;
+        }
         .filters {
             .form-item {
                 padding:0;

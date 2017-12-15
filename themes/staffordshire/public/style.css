@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900");
 @font-face {
   font-family: 'icomoon';
-  src: url("/themes/staffordshire/fonts/icomoon.eot?p5ou1g");
-  src: url("/themes/staffordshire/fonts/icomoon.eot?p5ou1g#iefix") format("embedded-opentype"), url("/themes/staffordshire/fonts/icomoon.ttf?p5ou1g") format("truetype"), url("/themes/staffordshire/fonts/icomoon.woff?p5ou1g") format("woff"), url("/themes/staffordshire/fonts/icomoon.svg?p5ou1g#icomoon") format("svg");
+  src: url("/themes/staffordshire/fonts/icomoon.eot?9jnhlv");
+  src: url("/themes/staffordshire/fonts/icomoon.eot?9jnhlv#iefix") format("embedded-opentype"), url("/themes/staffordshire/fonts/icomoon.ttf?9jnhlv") format("truetype"), url("/themes/staffordshire/fonts/icomoon.woff?9jnhlv") format("woff"), url("/themes/staffordshire/fonts/icomoon.svg?9jnhlv#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -20,6 +20,10 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-measure:before {
+  content: "\f0b2";
 }
 
 .icon-arrow-left:before {
@@ -1066,6 +1070,13 @@ div[class*="box"].box4 h4 {
   margin: 0 auto 30px;
 }
 
+.content article h2 {
+  font-size: 42px;
+  text-transform: none;
+  font-weight: 400;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
 .content article ul:not(.contextual-links):not(.unstyled):not(.dropdown-menu):not(.slick-dots) {
   list-style-type: none;
   padding-left: 20px;
@@ -1118,6 +1129,34 @@ div[class*="box"].box4 h4 {
   .content article ul.two-col {
     columns: 1;
   }
+}
+.content .sidebar h1 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: right;
+  color: #231F20;
+}
+.content .sidebar .info {
+  margin: 20px 0;
+  text-align: right;
+  font-size: 22px;
+}
+.content .sidebar .info div {
+  padding: 10px 0;
+}
+.content .sidebar .info div + div {
+  border-top: 1px solid #d8d8d8;
+}
+.content .sidebar .info i {
+  margin-right: 15px;
+  float: left;
+  line-height: 35px;
+}
+.content .sidebar .btn:not(.underline):not(.dropdown-toggle) {
+  text-align: center;
+  padding: 20px 30px;
+  margin-bottom: 20px;
 }
 .content .sidebar .filters .form-item {
   padding: 0;

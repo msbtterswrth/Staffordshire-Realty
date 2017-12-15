@@ -1,0 +1,37 @@
+<article{{ attributes }}>
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 pull-right">
+      <div class="sidebar">
+        <div class="title">
+          <h1>
+            {{ content.field_address.0 }}<br/>
+            {% if node.field_apartment|length > 0 %}
+              {{ content.field_apartment.0 }}<br/>
+            {% endif %}
+            {{ content.field_city.0 }}, {{ content.field_state.0 }} {{ content.field_zip_code.0 }}
+          </h1>
+        </div>
+        <div class="info">
+          {% if node.field_rent|length > 0 %}
+            <div class="price"><i class="icon-dollar"></i> Monthly Rent: {{ content.field_rent.0 }}</div>
+          {% endif %}
+          {% if node.field_bedrooms|length > 0 %}
+            <div class="bed"><i class="icon-bed"></i> Bedrooms: {{ content.field_bedrooms.0 }}</div>
+          {% endif %}
+          {% if node.field_bathrooms|length > 0 %}
+            <div class="bath"><i class="icon-bath"></i> Bathrooms: {{ content.field_bathrooms.0 }}</div>
+          {% endif %}
+          {% if node.field_square_footage|length > 0 %}
+            <div class="footage"><i class="icon-measure"></i> Sq. Footage: {{ content.field_square_footage.0 }}</div>
+          {% endif %}
+        </div>
+        <a class="btn green btn-block" href="/request-showing">Request Showing</a>
+        <a class="btn orange btn-block" href="{{ content.field_map_link.uri }}">View Map</a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-8">
+      <div class="slides">{{ content.field_slides }}</div>
+      <div class="content">{{ content.body }}</div>
+    </div>
+  </div>
+</article>
