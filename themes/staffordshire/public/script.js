@@ -25,16 +25,20 @@
         $(".selectpicker", context).selectpicker({});
     }
     function initSlick(context) {
-        $(".slick", context).each(function() {
-            var $slider = $(this);
-            if ($slider.hasClass("has-pager")) {
-                var $pager = $('<div class="pager"></div>');
-                $slider.before($pager);
-                $slider.on("init reInit afterChange", function(event, slick, currentSlide, nextSlide) {
-                    $pager.text((currentSlide ? currentSlide : 0) + 1 + " of " + slick.slideCount);
-                });
-            }
-            $slider.slick({});
+        $('.single').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: true,
+            asNavFor: '.thumbs'
+        });
+        $('.thumbs').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            asNavFor: '.single',
+            arrows:true,
+            centerMode: true,
+            focusOnSelect: true
         });
     }
     function initSmoothScroll(context) {

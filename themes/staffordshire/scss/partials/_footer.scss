@@ -5,6 +5,9 @@
         font-size: 20px;
         font-weight: 300;
         line-height: 28px;
+        @include breakpoint(xs) {
+            text-align: left;
+        }
         a {
             color: $blue;
             &:hover {

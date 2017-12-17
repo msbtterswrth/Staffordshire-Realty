@@ -1,11 +1,11 @@
 .slick {
     .slick-arrow {
         position:absolute;
-        background:none;
+        background:rgba(#fff,.4);
         height:100px;
         width:40px;
         z-index:9;
-        @include transition(background .3s linear);
+        @include transition(background .3s linear, color .3s linear);
         @include breakpoint(md) {
             height:80px;
             width:30px;
@@ -16,7 +16,7 @@
         }
         &::before {
             font-family: 'icomoon' !important;
-            color:$gray;
+            color:#fff;
             font-size:30px;
             opacity:1;
             @include breakpoint(md) {
@@ -29,16 +29,18 @@
         &.slick-prev {
             left:0;
             &::before {
-                content: "\e903";
+                content: "\e900";
             }
         }
         &.slick-next {
             right:0;
             &::before {
-                content: "\e904";
+                content: "\e901";
             }
         }
         &:hover {
+            background:rgba(#fff,.8);
+            color:$gray;
             &::before {
                 opacity:1;
             }
@@ -84,4 +86,7 @@
             }
         }
     }
+}
+.slides {
+    margin-bottom: 60px;
 }

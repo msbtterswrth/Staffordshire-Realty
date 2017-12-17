@@ -59,6 +59,45 @@
             }
         }
     }
+    .box3 {
+        @include breakpoint(xs) {
+            margin: 0 -15px;
+        }
+    }
+    .filters {
+        @include breakpoint(xs) {
+            margin-bottom: 40px;
+        }
+        .form-item {
+            padding:0;
+            margin-bottom: 20px;
+            float:none;
+            label {
+                color:$blue;
+                text-transform: uppercase;
+                font-size:20px;
+            }
+        }
+        .btn:not(.dropdown-toggle) {
+            background:$orange;
+            color:#fff;
+            display: block;
+            width: 100%;
+            margin-top:30px;
+            text-align: center;
+            font-weight: 600;
+            &:hover {
+                background:darken($orange,20%);
+            }
+        }
+        #edit-reset {
+            background: $lt-gray;
+            margin-top:10px;
+            &:hover {
+                background:darken($lt-gray,10%);;
+            }
+        }
+    }
     .sidebar {
         h1  {
             font-size:28px;
@@ -66,6 +105,10 @@
             line-height: 36px;
             text-align: right;
             color: $gray;
+            @include breakpoint(xs) {
+                text-align: left;
+                font-size:32px;
+            }
         }
         .info {
             margin: 20px 0;
@@ -88,40 +131,12 @@
             padding:20px 30px;
             margin-bottom: 20px;
         }
-        .filters {
-            .form-item {
-                padding:0;
-                margin-bottom: 20px;
-                float:none;
-                label {
-                    color:$blue;
-                    text-transform: uppercase;
-                    font-size:20px;
-                }
-            }
-            .btn:not(.dropdown-toggle) {
-                background:$orange;
-                color:#fff;
-                display: block;
-                width: 100%;
-                margin-top:30px;
-                text-align: center;
-                font-weight: 600;
-                &:hover {
-                    background:darken($orange,20%);
-                }
-            }
-            #edit-reset {
-                background: $lt-gray;
-                margin-top:10px;
-                &:hover {
-                    background:darken($lt-gray,10%);;
-                }
-            }
-        }
     }
 }
 .testimonials {
+    @include breakpoint(xs) {
+        margin:0 15px;
+    }
     h2 {
         color:$orange;
         font-weight: 400;
@@ -180,6 +195,9 @@
 .property-listings {
     .property {
         position:relative;
+        + .property {
+            margin-top:40px;
+        }
         .info {
             background:$green;
             top:-5px;
@@ -241,6 +259,10 @@
             width:100%;
             padding:20px;
             text-align: right;
+            @include breakpoint(xs) {
+                position: relative;
+                text-align: left;
+            }
             a {
                 color:$green;
                 font-weight: 700;

@@ -30,6 +30,7 @@
         box-shadow:none;
         outline:none;
         padding:16px;
+        width:100%;
         &:focus {
             border:1px solid $blue; 
             box-shadow:none;
@@ -53,7 +54,10 @@
         }
     }
 }
-
+.captcha {
+    clear:both;
+    margin: 15px;
+}
 
 .bootstrap-select.btn-group, .bootstrap-select {
     width:100%!important;

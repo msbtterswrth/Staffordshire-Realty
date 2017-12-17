@@ -56,6 +56,9 @@ div[class*="box"] {
 }
 .features {
     margin:60px -15px;
+    @include breakpoint(xs) {
+        margin: 0 -15px;
+    }
     div[class^="box"] {
         text-align: center;
         padding:40px 20px;
@@ -67,9 +70,16 @@ div[class*="box"] {
             font-size:80px;
             font-weight: 800;
             margin:40px 0;
+            @include breakpoint(xs) {
+                font-size: 45px;
+                margin:20px 0;
+            }
             span {
                 font-size:50px;
                 text-transform: uppercase;
+                @include breakpoint(xs) {
+                    font-size: 25px;
+                }
             }
         }
         &.box2 {

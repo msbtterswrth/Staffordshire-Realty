@@ -1,10 +1,27 @@
 .header {
     padding:10px 0;
+    #block-staffordshire-branding {
+        .nav-open & {
+            @include breakpoint(xs) {
+                position: fixed;
+                z-index: 9;
+            }
+        }
+    }
     .logo {
         position: relative;
         z-index: 9;
         .white-logo {
             display:none;
+        }
+    }
+    #block-mobilemenutoggle {
+        .nav-open & {
+            @include breakpoint(xs) {
+                position: fixed;
+                z-index: 9;
+                right: 0;
+            }
         }
     }
     .nav-toggle  {
@@ -17,10 +34,19 @@
         @include transform-origin(15px);
         @include transition (transform .3s cubic-bezier(0.0, 0.0, 0.2, 1));
         .nav-open &{
-            @include rotate(90);            
+            @include rotate(90);   
+            @include breakpoint(xs) {
+                color: $blue!important;
+            }
         }
         .scroll:not(.nav-open) &{
             color:$blue;
+        }
+        @include breakpoint(xs) {
+            color: $blue;
+            .home-wrap &{
+                color:#fff;
+            }
         }
     }
     .nav {
@@ -29,9 +55,10 @@
             top:0;
             width:100%;
             left:0;
-            background:$blue;
-            padding:150px 40px;
+            background:#f5f5f5;
+            padding:100px 40px;
             height: 100vh;
+            z-index: 2;
             @include translate(100%,0);
             @include transition(transform .3s linear);
             .nav-open &{

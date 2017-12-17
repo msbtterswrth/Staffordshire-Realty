@@ -10,9 +10,15 @@
         .logo {
             .color-logo {
                 display: none;
+                .nav-open & {
+                    display: block;
+                }
             }
             .white-logo {
                 display:block;
+                .nav-open & {
+                    display: none;
+                }
             }
         }
         .nav {
@@ -20,6 +26,9 @@
                 li {
                     a {
                         color:#fff;
+                        .nav-open & {
+                            color:$blue;
+                        }
                         &::before {
                             background:#fff;
                         }
@@ -33,7 +42,7 @@
                 }
             }
         }
-        .scroll:not(.nav-open) &{
+        .scroll &{
             background:#fff;
             padding:10px 0;
             .white-logo {
@@ -41,10 +50,12 @@
             }
             .color-logo {
                 display:block;
+                width: 66%;
             }
             .nav {
                 ul {
                     li {
+                        padding:0 30px;
                         a {
                             color:$blue;
                             &::before {
@@ -52,6 +63,7 @@
                             }
                             &.btn {
                                 border:1px solid $blue;
+                                padding:15px 30px;
                                 &:hover {
                                     background: darken($blue,10%);
                                     color:#fff;
@@ -88,6 +100,9 @@
                 width:100%;
                 text-align: center;
                 @include translate(0,-50%);
+                @include breakpoint(xs) {
+                    font-size:50px;
+                }
             }
         }
         .scroll {
@@ -105,6 +120,7 @@
     .top {
         padding:80px 0 120px;
         background:$blue;
+        margin-bottom: 0;
         &::before {
             content: "Baltimore Hampden MT. Washington Canton Fells Point Roland Park Gwynn Oak Federal Hill Catonsville Inner Harbor Waverly Towson Belair Belvedere Charles Bolton Hill Upton Seton Hill Locust Point Pigtown Patterson Park Highlandtown Bayview Pimlico Overlea Loch Raven";
             font-size: 75px;
