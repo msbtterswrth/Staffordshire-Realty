@@ -110,7 +110,7 @@ div[class*="box"] {
         }
     }
 }
-#block-homepagefeatures {
+#block-homepagefeatures, #block-homepagefeatures-2 {
     text-align: center;
     color:#fff;
     h2 {
@@ -147,6 +147,19 @@ div[class*="box"] {
             font-size:65px;
             margin-bottom: 25px;
             display: block;
+        }
+    }
+}
+#block-homepagefeatures-2 {
+    div[class^="col"] {
+        .inner {
+            background:$blue;
+            color:#fff;
+        }
+        &:nth-of-type(even) {
+            .inner {
+                background:darken($blue,10%);
+            }
         }
     }
 }

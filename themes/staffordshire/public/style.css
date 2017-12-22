@@ -621,15 +621,15 @@ div[class*="box"].box4 h4 {
   color: #231F20;
 }
 
-#block-homepagefeatures {
+#block-homepagefeatures, #block-homepagefeatures-2 {
   text-align: center;
   color: #fff;
 }
-#block-homepagefeatures h2 {
+#block-homepagefeatures h2, #block-homepagefeatures-2 h2 {
   margin: 0 0 100px 0;
   position: relative;
 }
-#block-homepagefeatures h2::after {
+#block-homepagefeatures h2::after, #block-homepagefeatures-2 h2::after {
   content: "";
   position: absolute;
   width: 30%;
@@ -644,30 +644,38 @@ div[class*="box"].box4 h4 {
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
-#block-homepagefeatures .inner {
+#block-homepagefeatures .inner, #block-homepagefeatures-2 .inner {
   background: #fff;
   padding: 45px 20px;
   color: #43527d;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  #block-homepagefeatures .inner {
+  #block-homepagefeatures .inner, #block-homepagefeatures-2 .inner {
     margin-bottom: 15px;
   }
 }
 @media (max-width: 767px) {
-  #block-homepagefeatures .inner {
+  #block-homepagefeatures .inner, #block-homepagefeatures-2 .inner {
     margin-bottom: 15px;
   }
 }
-#block-homepagefeatures .inner p {
+#block-homepagefeatures .inner p, #block-homepagefeatures-2 .inner p {
   font-size: 15px;
   line-height: 21px;
   margin: 0;
 }
-#block-homepagefeatures .inner i {
+#block-homepagefeatures .inner i, #block-homepagefeatures-2 .inner i {
   font-size: 65px;
   margin-bottom: 25px;
   display: block;
+}
+
+#block-homepagefeatures-2 div[class^="col"] .inner {
+  background: #43527e;
+  color: #fff;
+}
+#block-homepagefeatures-2 div[class^="col"]:nth-of-type(even) .inner {
+  background: #313c5d;
 }
 
 .header {

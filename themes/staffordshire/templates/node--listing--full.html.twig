@@ -27,7 +27,9 @@
           {% endif %}
         </div>
         <a class="btn green btn-block" href="/request-showing">Request Showing</a>
-        <a class="btn orange btn-block" href="{{ content.field_map_link.uri }}">View Map</a>
+        {% if node.field_map_link|length > 0 %}
+            <a class="btn orange btn-block" href="{{ content.field_map_link.0 }}">View Map</a>
+        {% endif %}
       </div>
     </div>
     <div class="col-xs-12 col-sm-8">
