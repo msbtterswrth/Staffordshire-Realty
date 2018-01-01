@@ -59,6 +59,35 @@
             }
         }
     }
+    .tag {
+        padding: 10px 20px;
+        background: $xl-gray;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        &::before {
+            background:$green;
+            content: "";
+            position: absolute;
+            top: 100%;
+            width:0;
+            height: 3px;
+            left:0;
+            z-index: 2;
+            @include transition(width .3s cubic-bezier(0.0, 0.0, 0.2, 1));
+        }
+        &:hover, &:focus {
+            &::before {
+                width:100%;
+            }
+        }
+        + .tag {
+            margin-left:5px;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
     .box3 {
         @include breakpoint(xs) {
             margin: 0 -15px;

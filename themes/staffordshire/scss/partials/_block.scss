@@ -21,14 +21,28 @@ div[class*="box"] {
             margin-top:20px;
         }
     }
-    a {
-
+    .item-list {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
     }
     &.center{
         text-align:center;
     }
     &.flush {
         margin-top:0;
+    }
+    &.title1 {
+        h2 {
+            font-size: 22px;
+            text-transform: none;
+            margin: 0 0 10px 0;
+            line-height: 32px;
+            color: $blue;
+            border-bottom: 3px solid $blue;
+        }
     }
     &.box1 {
         background:$blue;

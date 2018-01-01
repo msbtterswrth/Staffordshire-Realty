@@ -525,11 +525,24 @@ div[class*="box"] p {
 div[class*="box"] p + h4 {
   margin-top: 20px;
 }
+div[class*="box"] .item-list ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
 div[class*="box"].center {
   text-align: center;
 }
 div[class*="box"].flush {
   margin-top: 0;
+}
+div[class*="box"].title1 h2 {
+  font-size: 22px;
+  text-transform: none;
+  margin: 0 0 10px 0;
+  line-height: 32px;
+  color: #43527e;
+  border-bottom: 3px solid #43527e;
 }
 div[class*="box"].box1 {
   background: #43527e;
@@ -1219,6 +1232,37 @@ div[class*="box"].box4 h4 {
   .content article ul.two-col {
     columns: 1;
   }
+}
+.content .tag {
+  padding: 10px 20px;
+  background: #f0f0f0;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+.content .tag::before {
+  background: #a6bb51;
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 3px;
+  left: 0;
+  z-index: 2;
+  -webkit-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -moz-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -ms-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -o-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+.content .tag:hover::before, .content .tag:focus::before {
+  width: 100%;
+}
+.content .tag + .tag {
+  margin-left: 5px;
+}
+.content .tag a {
+  text-decoration: none;
 }
 @media (max-width: 767px) {
   .content .box3 {
