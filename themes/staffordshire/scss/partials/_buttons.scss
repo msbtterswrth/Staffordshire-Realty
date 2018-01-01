@@ -9,7 +9,7 @@
     line-height:20px;
     padding:16px 30px;
     position: relative;
-    @include transition(background .3s linear);
+    @include transition(background .3s linear, color .3s linear);
     &.clear {
         color:#fff!important;
         border:1px solid #fff; 
@@ -45,6 +45,15 @@
         color:#fff!important;
         &:hover {
             background: $md-gray;
+        }
+    }
+    &.link {
+        margin: 0;
+        text-align: left;
+        padding: 10px 0 0 0;
+        color: $orange;
+        &:hover {
+            color: darken($orange, 20%);
         }
     }
     &.underline {

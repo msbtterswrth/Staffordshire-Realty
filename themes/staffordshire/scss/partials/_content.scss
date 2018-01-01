@@ -59,6 +59,12 @@
             }
         }
     }
+    .post {
+        + .post {
+            border-top: 2px solid $xl-gray;
+            margin-top: 30px;
+        }
+    }
     .tag {
         padding: 10px 20px;
         background: $xl-gray;
@@ -155,7 +161,7 @@
                 line-height: 35px;
             }
         }
-        .btn:not(.underline):not(.dropdown-toggle) {
+        .btn:not(.underline):not(.dropdown-toggle):not(.link) {
             text-align: center;
             padding:20px 30px;
             margin-bottom: 20px;

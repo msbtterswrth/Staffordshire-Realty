@@ -309,11 +309,11 @@
   line-height: 20px;
   padding: 16px 30px;
   position: relative;
-  -webkit-transition: background 0.3s linear;
-  -moz-transition: background 0.3s linear;
-  -ms-transition: background 0.3s linear;
-  -o-transition: background 0.3s linear;
-  transition: background 0.3s linear;
+  -webkit-transition: background 0.3s linear, color 0.3s linear;
+  -moz-transition: background 0.3s linear, color 0.3s linear;
+  -ms-transition: background 0.3s linear, color 0.3s linear;
+  -o-transition: background 0.3s linear, color 0.3s linear;
+  transition: background 0.3s linear, color 0.3s linear;
 }
 .btn.clear {
   color: #fff !important;
@@ -351,6 +351,15 @@
 }
 .btn.black:hover {
   background: #3c3d40;
+}
+.btn.link {
+  margin: 0;
+  text-align: left;
+  padding: 10px 0 0 0;
+  color: #b66f36;
+}
+.btn.link:hover {
+  color: #673f1f;
 }
 .btn.underline {
   background: none;
@@ -1233,6 +1242,10 @@ div[class*="box"].box4 h4 {
     columns: 1;
   }
 }
+.content .post + .post {
+  border-top: 2px solid #f0f0f0;
+  margin-top: 30px;
+}
 .content .tag {
   padding: 10px 20px;
   background: #f0f0f0;
@@ -1332,7 +1345,7 @@ div[class*="box"].box4 h4 {
   float: left;
   line-height: 35px;
 }
-.content .sidebar .btn:not(.underline):not(.dropdown-toggle) {
+.content .sidebar .btn:not(.underline):not(.dropdown-toggle):not(.link) {
   text-align: center;
   padding: 20px 30px;
   margin-bottom: 20px;
