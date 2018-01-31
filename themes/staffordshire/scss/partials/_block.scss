@@ -68,6 +68,19 @@ div[class*="box"] {
         }
     }
 }
+.no-fees {
+    background: #f5f5f5;
+    text-align: center;
+    padding: 20px 0;
+    p {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+    a {
+        color:$green;
+    }
+}
+
 .features {
     margin:60px -15px;
     @include breakpoint(xs) {

@@ -577,6 +577,19 @@ div[class*="box"].box4 h4 {
   color: #43527e;
 }
 
+.no-fees {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 20px 0;
+}
+.no-fees p {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.no-fees a {
+  color: #a6bb51;
+}
+
 .features {
   margin: 60px -15px;
 }
