@@ -24,12 +24,14 @@ body {
         }
         &.top {
             background:$xl-gray;
-            padding:20px 0;
+            padding:10px 0;
             overflow:hidden;
-            margin-bottom:30px;
+            margin-bottom:20px;
             h1 {
                 color:$blue;
                 margin: 0;
+                font-size: 40px;
+                line-height: 52px;
             }
         }
         &.main {

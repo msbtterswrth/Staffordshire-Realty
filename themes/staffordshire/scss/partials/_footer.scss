@@ -18,4 +18,20 @@
     .btn {
         text-align: center;
     }
+    .inline {
+        list-style-type: none;
+        padding:0;
+        text-align: right;
+        li {
+            display:inline-block;
+            &:first-of-type {
+                display: block;
+            }
+            + li {
+                background:$lt-gray;
+                padding:10px;
+                margin:5px;
+            }
+        }
+    }
 }
