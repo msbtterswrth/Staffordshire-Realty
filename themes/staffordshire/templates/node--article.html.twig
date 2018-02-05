@@ -1,5 +1,5 @@
 <article{{ attributes }}>
-  <p><em>Posted by {{ author_name }} on {{ node.createdtime.value|date('F j, Y') }}</em></p>
+  <p><em>Posted on {{ node.createdtime.value|date('F j, Y') }}</em></p>
   {{ content.body }}
   <div class="tags">
     {{ content.field_tags }}

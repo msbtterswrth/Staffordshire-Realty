@@ -69,23 +69,37 @@ div[class*="box"] {
     }
 }
 .no-fees {
-    background:$green;
+    background:rgba(#000,.7);
     text-align: center;
     padding: 20px 0;
+    position: absolute;
+    width:100%;
+    left: 0;
+    bottom: 0;
     p {
         font-size: 28px;
         line-height: 38px;
         margin-bottom: 0;
-    }
-    strong {
-        color:darken($green,30%);
+        color:#fff;
+        font-weight: 300;
     }
     a {
         color:#fff;
         position: relative;
         text-decoration: none;
+        &::before {
+            background:#fff;
+            content: "";
+            width:100%;
+            height: 2px;
+            margin-top: 5px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            @include transition(width .3s cubic-bezier(0.0, 0.0, 0.2, 1));
+        }
         &::after {
-            background:darken($green,20%);
+            background:$green;
             content: "";
             width:0;
             height: 2px;
@@ -96,7 +110,7 @@ div[class*="box"] {
             @include transition(width .3s cubic-bezier(0.0, 0.0, 0.2, 1));
         }
         &:hover, &:focus {
-            color:darken($green,20%);
+            color:$green;
             &::after {
                 width:100%;
             }

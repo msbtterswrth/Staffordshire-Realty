@@ -578,25 +578,43 @@ div[class*="box"].box4 h4 {
 }
 
 .no-fees {
-  background: #a6bb51;
+  background: rgba(0, 0, 0, 0.7);
   text-align: center;
   padding: 20px 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
 .no-fees p {
   font-size: 28px;
   line-height: 38px;
   margin-bottom: 0;
-}
-.no-fees strong {
-  color: #495320;
+  color: #fff;
+  font-weight: 300;
 }
 .no-fees a {
   color: #fff;
   position: relative;
   text-decoration: none;
 }
+.no-fees a::before {
+  background: #fff;
+  content: "";
+  width: 100%;
+  height: 2px;
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -moz-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -ms-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  -o-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
 .no-fees a::after {
-  background: #69772f;
+  background: #a6bb51;
   content: "";
   width: 0;
   height: 2px;
@@ -611,7 +629,7 @@ div[class*="box"].box4 h4 {
   transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 .no-fees a:hover, .no-fees a:focus {
-  color: #69772f;
+  color: #a6bb51;
 }
 .no-fees a:hover::after, .no-fees a:focus::after {
   width: 100%;
@@ -1076,8 +1094,8 @@ div[class*="box"].box4 h4 {
   color: #fff;
 }
 .home-wrap .banner .bg {
-  height: 40vh;
-  min-height: 400px;
+  height: 50vh;
+  min-height: 600px;
   padding: 80px 0;
   position: relative;
   overflow: hidden;
@@ -1118,7 +1136,7 @@ div[class*="box"].box4 h4 {
   position: absolute;
   width: 100%;
   text-align: center;
-  bottom: 20px;
+  bottom: 100px;
 }
 .home-wrap .banner .scroll a {
   color: #fff;
@@ -1568,7 +1586,7 @@ body section.top {
   background: #f0f0f0;
   padding: 10px 0;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 body section.top h1 {
   color: #43527e;
