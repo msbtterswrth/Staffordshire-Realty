@@ -1,5 +1,5 @@
 <article{{ attributes.addClass('post') }}>
   <h3><a href="{{ url }}">{{label}}</a></h3>
-  <p><em>Posted by {{ author_name }} on {{ node.createdtime.value|date('F j, Y') }}</em></p>
+  <p><em>Posted on {{ node.createdtime.value|date('F j, Y') }}</em></p>
   {{ content.body }}... <a href="{{ url }}">Read More</a>
 </article>
