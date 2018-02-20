@@ -41,11 +41,18 @@
         }
         .scroll:not(.nav-open) &{
             color:$blue;
+            @include breakpoint(xs) {
+                margin-top:0;
+            }
         }
         @include breakpoint(xs) {
             color: $blue;
+            margin-top:10px;
             .home-wrap &{
                 color:#fff;
+            }
+            .nav-open &{
+                margin-top:10px;
             }
         }
     }
@@ -142,7 +149,7 @@
                         }
                         @include breakpoint(xs) {
                             border:none!important;
-                            padding: 0;
+                            padding: 0!important;
                             font-size: 22px;
                         }
                         &::before {

@@ -263,17 +263,20 @@ body {
             li {
                 a {
                     border-radius:0;
-                    padding:10px 15px;
-                    border:2px solid $gray;
+                    padding:10px 5px;
+                    background:transparent;
+                    border: none;
+                    border-bottom: 2px solid transparent;
                     color:$gray;
                     text-decoration:none;
                     font-size:21px;
-                    @include transition(background .3s linear, border .3s linear);
+                    @include transition(color .3s linear, border .3s linear);
                 }
                 &.is-active, &:hover {
                     a {
-                        background:$green;
+                        background: transparent;
                         border-bottom:2px solid $green;
+                        color:$green;
                     }
                 }
             }

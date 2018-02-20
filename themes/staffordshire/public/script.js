@@ -30,13 +30,14 @@
             slidesToScroll: 1,
             arrows: true,
             fade: true,
-            asNavFor: '.thumbs'
+            asNavFor: '.thumbs',
+            adaptiveHeight:true
         });
         $('.thumbs').slick({
             slidesToShow: 5,
             slidesToScroll: 1,
             asNavFor: '.single',
-            arrows:true,
+            dots: true,
             centerMode: true,
             focusOnSelect: true
         });
@@ -81,6 +82,9 @@
             $(".search-toggle").click(function() {
                 $("body").toggleClass("search-open");
                 $("body").removeClass("nav-open");
+            });
+            $(".filter-toggle").click(function() {
+                $("body").toggleClass("filter-open");
             });
             $(".nav-toggle").click(function() {
                 $("body").toggleClass("nav-open");
