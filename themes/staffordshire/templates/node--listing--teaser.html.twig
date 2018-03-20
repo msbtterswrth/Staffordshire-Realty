@@ -12,7 +12,8 @@
         <div class="row">
           <div class="col-xs-12 col-sm-4">
             <div class="title">
-              {{ label }}
+              {{ content.field_address.0 }}{% if node.field_apartment|length > 0 %} {{ content.field_apartment.0 }} {% endif %}<br/>
+              {{ content.field_city.0 }}, {{ content.field_state.0 }} {{ content.field_zip_code.0 }}
             </div>
           </div>
           <div class="col-xs-12 col-sm-8">

@@ -26,7 +26,7 @@
             <div class="footage"><i class="icon-measure"></i> Sq. Footage: {{ content.field_square_footage.0 }}</div>
           {% endif %}
         </div>
-        <a class="btn green btn-block" href="/request-showing">Request Showing</a>
+        <a class="btn green btn-block" href="/request-showing?address={{ node.id }}">Request Showing</a>
         {% if node.field_map_link|length > 0 %}
             <a class="btn orange btn-block" href="{{ content.field_map_link.0 }}">View Map</a>
         {% endif %}
