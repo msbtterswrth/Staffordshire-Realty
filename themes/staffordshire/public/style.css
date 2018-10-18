@@ -562,6 +562,13 @@ div[class*="box"] .item-list ul {
   margin: 0;
   list-style-type: none;
 }
+div[class*="box"] .item-list ul li {
+  margin-bottom: 15px;
+}
+div[class*="box"] .item-list ul li + li {
+  border-top: 1px solid rgba(166, 187, 81, 0.5);
+  padding-top: 15px;
+}
 div[class*="box"].center {
   text-align: center;
 }
