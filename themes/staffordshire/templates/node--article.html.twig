@@ -1,5 +1,5 @@
 <article{{ attributes }}>
-  <p><em>Posted on {{ node.createdtime.value|date('F j, Y') }}</em></p>
+  <p><em>Posted on {{ node.getCreatedTime|format_date('medium') }}</em></p>
   {{ content.body }}
   <div class="tags">
     {{ content.field_tags }}
